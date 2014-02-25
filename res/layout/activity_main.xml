@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+	
+    <EditText
+        android:id="@+id/et_dial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:phoneNumber="true"
+		android:singleLine="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:hint="@string/hint"
+        android:ems="10" >
+        <requestFocus />
+    </EditText>
+    
+ <!-- 方法四 -->
+    <Button
+        android:id="@+id/bt_dial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_dial"
+        android:layout_below="@+id/et_dial"
+        android:onClick="dial"
+        android:text="拨  打" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_dial"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+		android:onClick="info"
+        android:text="@string/info" />
+
+</RelativeLayout>
