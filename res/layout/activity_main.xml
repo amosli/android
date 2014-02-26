@@ -38,7 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/et_content"
         android:layout_below="@+id/et_content"
-        android:text="@string/send" />
+        android:text="@string/send" 
+        android:onClick="send_sms"/>
 
     <EditText
         android:id="@+id/et_phone"
