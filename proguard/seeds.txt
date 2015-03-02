@@ -1,0 +1,2 @@
+com.amos.test.MainActivity
+com.amos.test.MainActivity: MainActivity()

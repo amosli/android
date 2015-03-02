@@ -1,0 +1,12 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.amos.test.BuildConfig
+com.amos.test.R
+com.amos.test.R$attr
+com.amos.test.R$dimen
+com.amos.test.R$drawable
+com.amos.test.R$id
+com.amos.test.R$layout
+com.amos.test.R$menu
+com.amos.test.R$string
+com.amos.test.R$style

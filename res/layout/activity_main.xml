@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ImageView 
+        android:id="@+id/iv_pic"
+        android:layout_weight="1000"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:contentDescription="美女图片"
+        />
+    <EditText 
+        android:id="@+id/et_url"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+		android:hint="请输入url"
+		android:text="http://www.amianz.com/files/scimg/131105/1_131105155428_1.jpg"
+		android:singleLine="true"
+        />
+    <Button 
+        android:id="@+id/btn_show"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:onClick="showPic"
+		android:text="浏览"
+        />
+</LinearLayout>

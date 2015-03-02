@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:17
+-keep class com.amos.test.MainActivity { <init>(...); }
+
+# onClick res/layout/activity_main.xml #generated:20
+-keepclassmembers class * { *** showPic(...); }
+
