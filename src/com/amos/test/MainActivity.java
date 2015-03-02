@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
 			}
 		}
 	};
-	public static String urlMatcher = "^((http|ftp|https):\\/\\/)?[\\w-_.]+(\\/[\\w-_]+)*\\/?$";
+	public static String urlMatcher = "^((http|ftp|https):\\/\\/)?[\\w-_.]+(\\/[\\w-_]+)*\\/?.*";
 	Runnable runnable = new Runnable() {
 		@Override
 		public void run() {
