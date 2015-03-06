@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">webview</string>
+    <string name="action_settings">Settings</string>
+	<string name="input_url">输入url:</string>
+	<string name="hint_input_url">输入url</string>
+	<string name="navigate">浏览</string>
+	<string name="goback">返回</string>
+	<string name="goforward">前进</string>
+</resources>
