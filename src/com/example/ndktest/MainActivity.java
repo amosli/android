@@ -18,8 +18,10 @@ public class MainActivity extends ActionBarActivity {
 		Log.e("ndktest.class", getString.add(1, 3) + "");
 		Log.e("ndktest.class", getString.getStr());
 
-		System.out.println(">>>>>>>>>" + getString.getStr());
+		System.out.println("getStr >>>>>>>>>" + getString.getStr());
+		System.out.println("getWords >>>>>>>>> " + GetString.getWords());
 
+		
 		Toast.makeText(this, GetString.getstr() + GetInt.getint(),
 				Toast.LENGTH_LONG).show();
 		

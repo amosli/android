@@ -16,7 +16,8 @@ obj/local/armeabi/objs/NDKTEST/NDKTEST.o: jni/NDKTEST.cpp \
  /usr/share/android-ndk-r10/platforms/android-19/arch-arm/usr/include/linux/types.h \
  /usr/share/android-ndk-r10/platforms/android-19/arch-arm/usr/include/machine/kernel.h \
  /usr/share/android-ndk-r10/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h \
- jni/com_example_ndktest_GetInt.h jni/com_example_ndktest_GetString.h
+ jni/com_example_ndktest_GetInt.h jni/com_example_ndktest_GetString.h \
+ jni/Hello.h
 
 /usr/share/android-ndk-r10/platforms/android-19/arch-arm/usr/include/jni.h:
 
@@ -55,3 +56,5 @@ obj/local/armeabi/objs/NDKTEST/NDKTEST.o: jni/NDKTEST.cpp \
 jni/com_example_ndktest_GetInt.h:
 
 jni/com_example_ndktest_GetString.h:
+
+jni/Hello.h:

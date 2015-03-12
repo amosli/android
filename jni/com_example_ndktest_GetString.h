@@ -31,6 +31,14 @@ JNIEXPORT jstring JNICALL Java_com_example_ndktest_GetString_getStr
 JNIEXPORT jint JNICALL Java_com_example_ndktest_GetString_add
   (JNIEnv *, jobject, jint, jint);
 
+/*
+ * Class:     com_example_ndktest_GetString
+ * Method:    getWords
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_example_ndktest_GetString_getWords
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif
