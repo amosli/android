@@ -1,0 +1,4 @@
+用百度地图，可能把工程复制了些位置吧 出错了
+解决办法：
+一、右击项目->properties->Java Build Path->Order and Export，在需要引用的包前面打勾。
+二、Project->Clean...
