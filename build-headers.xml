@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     Mar 12, 2015 2:20:59 PM                                                        
+
+     project    
+     description
+                   
+     amosli                                                                
+     ====================================================================== -->
+<project name="NDKTEST" default="BuildAllStringHeaders">
+    <description>
+            description
+    </description>
+
+    <!-- ================================= 
+          target: default              
+         ================================= -->
+    <target name="BuildAllStringHeaders"  description="description">
+        <antcall target="BuildGetStringHeader"></antcall>
+    	<antcall target="BuildGetIntHeader"></antcall>
+    </target>
+
+	 <target name="BuildGetStringHeader"  >
+	 	<javah  destdir="./jni" class="com.example.ndktest.GetString" classpath="./bin/classes/"></javah>
+	  </target>
+	
+	<target name="BuildGetIntHeader">
+	 	<javah  destdir="./jni" class="com.example.ndktest.GetInt" classpath="./bin/classes/"></javah>
+	</target>
+	
+</project>
+
+
