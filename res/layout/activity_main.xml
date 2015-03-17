@@ -6,9 +6,7 @@
     android:baselineAligned="false"
     >
 
-
-
-    <fragment
+   <!--  <fragment
         android:id="@+id/f1"
         android:name="com.amosli.androidassembly.Fragment1"
         android:layout_width="0dp"
@@ -22,5 +20,5 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
-
+ -->
 </LinearLayout>
