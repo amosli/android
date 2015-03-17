@@ -1,0 +1,33 @@
+<Linealayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Linealayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/score" />
+
+        <TextView
+            android:id="@+id/tv_Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </Linealayout>
+
+    <!-- android:layout_weight=1 -->
+
+    <com.amosli.game2048.GameView
+        android:id="@+id/gameview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        >
+        
+    </com.amosli.game2048.GameView>
+
+</Linealayout>
