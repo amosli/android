@@ -13,9 +13,11 @@
 
     <ProgressBar
         android:id="@+id/pgRP"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5sp" />
+        android:layout_margin="5sp"
+        android:max="100" />
 
     <TextView
         android:id="@+id/tv_result"
@@ -25,6 +27,7 @@
         android:textSize="20sp" />
 
     <LinearLayout
+        style=""
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -37,14 +40,13 @@
             android:layout_margin="20sp"
             android:onClick="testAgain"
             android:text="@string/testAgain" />
-
-        <Button
-            android:onClick="exitApp"
-            android:id="@+id/btnExit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/exit" 
-            />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.37"
+        android:gravity="center"
+        android:textSize="20sp" />
 </LinearLayout>
