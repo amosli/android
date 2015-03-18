@@ -21,7 +21,6 @@ public class GameView extends GridLayout {
 	public GameView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		initGameView();
-
 	}
 
 	public GameView(Context context) {
@@ -79,7 +78,7 @@ public class GameView extends GridLayout {
 		startGame();
 	}
 
-	private Card[][] cards;
+	private Card[][] cards = new Card[4][4];
 
 	private void addCards(int cardwidth) {
 		Card c;
