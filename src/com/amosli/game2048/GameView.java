@@ -16,6 +16,7 @@ public class GameView extends GridLayout {
 	public GameView(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
 		initGameView();
+
 	}
 
 	public GameView(Context context, AttributeSet attrs) {
@@ -93,12 +94,22 @@ public class GameView extends GridLayout {
 	}
 
 	private void startGame() {
-		//clear cards
+		MainActivity.getInstance().clearScore();
+
+		// clear cards
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
 				cards[j][i].setNum(0);
 			}
 		}
+
+		addRandomNumber();
+		addRandomNumber();
+		addRandomNumber();
+
+		addRandomNumber();
+		addRandomNumber();
+		addRandomNumber();
 
 		addRandomNumber();
 		addRandomNumber();
@@ -124,19 +135,136 @@ public class GameView extends GridLayout {
 		cards[p.x][p.y].setNum(Math.random() > 0.1 ? 2 : 4);// 2or4 9:1
 	}
 
+	// y=0
+	// x=0
+	// x1=1--->3
+	//
 	private void swipeLeft() {
 
+		boolean merge = false;
+		for (int y = 0; y < 4; y++) {
+
+			for (int x = 0; x < 4; x++) {
+
+				for (int x1 = x + 1; x1 < 4; x1++) {
+
+					if (cards[x1][y].getNum() > 0) {
+						if (cards[x][y].getNum() <= 0) {
+							cards[x][y].setNum(cards[x1][y].getNum());
+							cards[x1][y].setNum(0);
+
+							x--;
+							merge = true;
+						} else if (cards[x][y].equals(cards[x1][y])) {
+							cards[x][y].setNum(cards[x][y].getNum() * 2);
+							cards[x1][y].setNum(0);
+							MainActivity.getInstance().addScore(
+									cards[x][y].getNum());
+							merge = true;
+						}
+						break;
+					}
+				}
+
+			}
+		}
+		if (merge) {
+			addRandomNumber();
+		}
 	}
 
 	private void swipeRight() {
+		boolean merge = false;
+		for (int y = 0; y < 4; y++) {
 
+			for (int x = 3; x > -1; x--) {
+
+				for (int x1 = x - 1; x1 >= 0; x1--) {
+					if (cards[x1][y].getNum() > 0) {
+						if (cards[x][y].getNum() <= 0) {
+							cards[x][y].setNum(cards[x1][y].getNum());
+							cards[x1][y].setNum(0);
+
+							x++;
+							merge = true;
+						} else if (cards[x][y].equals(cards[x1][y])) {
+							cards[x][y].setNum(cards[x][y].getNum() * 2);
+							cards[x1][y].setNum(0);
+							MainActivity.getInstance().addScore(
+									cards[x][y].getNum());
+							merge = true;
+						}
+						break;
+					}
+				}
+
+			}
+		}
+		if (merge) {
+			addRandomNumber();
+		}
 	}
 
 	private void swipeUp() {
+		boolean merge = false;
+		for (int x = 0; x < 4; x++) {
 
+			for (int y = 0; y < 4; y++) {
+
+				for (int y1 = y + 1; y1 < 4; y1++) {
+					if (cards[x][y1].getNum() > 0) {
+						if (cards[x][y].getNum() <= 0) {
+							cards[x][y].setNum(cards[x][y1].getNum());
+							cards[x][y1].setNum(0);
+							merge = true;
+							y--;
+						} else if (cards[x][y].equals(cards[x][y1])) {
+							cards[x][y].setNum(cards[x][y].getNum() * 2);
+							cards[x][y1].setNum(0);
+							MainActivity.getInstance().addScore(
+									cards[x][y].getNum());
+							merge = true;
+						}
+						break;
+					}
+				}
+
+			}
+		}
+
+		if (merge) {
+			addRandomNumber();
+		}
 	}
 
 	private void swipeDown() {
+		boolean merge = false;
+		for (int x = 0; x < 4; x++) {
+
+			for (int y = 3; y > -1; y--) {
+
+				for (int y1 = y - 1; y1 > -1; y1++) {
+					if (cards[x][y1].getNum() > 0) {
+						if (cards[x][y].getNum() <= 0) {
+							cards[x][y].setNum(cards[x][y1].getNum());
+							cards[x][y1].setNum(0);
+							merge = true;
+							y++;
+						} else if (cards[x][y].equals(cards[x][y1])) {
+							cards[x][y].setNum(cards[x][y].getNum() * 2);
+							cards[x][y1].setNum(0);
+							MainActivity.getInstance().addScore(
+									cards[x][y].getNum());
+						}
+						break;
+					}
+				}
+
+			}
+		}
+		if (merge) {
+			addRandomNumber();
+		}
 
 	}
 

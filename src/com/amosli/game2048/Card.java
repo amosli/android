@@ -13,13 +13,13 @@ public class Card extends FrameLayout {
 		label = new TextView(getContext());
 		label.setTextSize(32);
 		label.setGravity(3);
-		label.setTextColor(0x33ffff);
+		label.setTextColor(0x33ffddff);
 
 		// fill parent
 		LayoutParams lp = new LayoutParams(-1, -1);
 		lp.setMargins(10, 10, 10, 10);
-		addView(label, lp);
 		setNum(0);
+		addView(label, lp);
 	}
 
 	public int getNum() {
