@@ -1,6 +1,7 @@
 package com.amosli.game2048;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -12,14 +13,14 @@ public class Card extends FrameLayout {
 		super(context);
 		label = new TextView(getContext());
 		label.setTextSize(32);
-		label.setGravity(3);
-		label.setTextColor(0x33ffddff);
+		label.setTextColor(0x33ffffff);
+		label.setGravity(Gravity.CENTER);
 
 		// fill parent
 		LayoutParams lp = new LayoutParams(-1, -1);
 		lp.setMargins(10, 10, 10, 10);
-		setNum(0);
 		addView(label, lp);
+		setNum(0);
 	}
 
 	public int getNum() {

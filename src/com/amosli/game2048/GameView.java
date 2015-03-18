@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Point;
 import android.util.AttributeSet;
@@ -16,7 +17,6 @@ public class GameView extends GridLayout {
 	public GameView(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
 		initGameView();
-
 	}
 
 	public GameView(Context context, AttributeSet attrs) {
@@ -29,10 +29,11 @@ public class GameView extends GridLayout {
 		initGameView();
 	}
 
+	@SuppressLint("ClickableViewAccessibility")
 	public void initGameView() {
 		setColumnCount(4);
-		setBackgroundColor(0xbbdadf);
-
+		setBackgroundColor(0xffbbada0);
+		
 		setOnTouchListener(new OnTouchListener() {
 			private float startX, startY, offsetX, offsetY;
 
@@ -243,7 +244,7 @@ public class GameView extends GridLayout {
 
 			for (int y = 3; y > -1; y--) {
 
-				for (int y1 = y - 1; y1 > -1; y1++) {
+				for (int y1 = y - 1; y1 > -1; y1--) {
 					if (cards[x][y1].getNum() > 0) {
 						if (cards[x][y].getNum() <= 0) {
 							cards[x][y].setNum(cards[x][y1].getNum());
