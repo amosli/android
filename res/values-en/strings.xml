@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Character Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="tvRpjsq">Character Calculator</string>
+    <string name="et_InputName">input your name pls</string>
+    <string name="calcutorit">Calculate</string>
+    <string name="title_activity_result">Test Result</string>
+    <string name="testResult">Test Result:</string>
+    <string name="testAgain">Try Again</string>
+    <string name="exit">exit</string>
+</resources>

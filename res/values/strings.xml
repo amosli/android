@@ -7,7 +7,7 @@
     <string name="tvRpjsq">人品计算器</string>
     <string name="et_InputName">请输入你的姓名</string>
     <string name="calcutorit">计  算</string>
-    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_result">计算结果</string>
     <string name="testResult">测试结果:</string>
     <string name="testAgain">再测一遍</string>
     <string name="exit">退出</string>
