@@ -13,12 +13,12 @@ public class Card extends FrameLayout {
 		super(context);
 		label = new TextView(getContext());
 		label.setTextSize(32);
-		label.setTextColor(0x33ffffff);
+		label.setBackgroundColor(0x33ffffff);
 		label.setGravity(Gravity.CENTER);
 
 		// fill parent
 		LayoutParams lp = new LayoutParams(-1, -1);
-		lp.setMargins(10, 10, 10, 10);
+		lp.setMargins(10, 10, 0, 0);
 		addView(label, lp);
 		setNum(0);
 	}
@@ -30,10 +30,12 @@ public class Card extends FrameLayout {
 	public void setNum(int num) {
 		this.num = num;
 		
-		// int is means R.id.* ,so cannot use
-		label.setText(num + "");
-		if(num==0){
+		
+		if(num<=0){
 			label.setText("");	
+		}else{
+			// int is means R.id.* ,so cannot use
+			label.setText(num + "");
 		}
 		
 	}

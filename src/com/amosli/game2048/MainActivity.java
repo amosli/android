@@ -6,8 +6,8 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+	private static MainActivity mainActivity=null;
 	private TextView tvScore;
-	private static MainActivity mainActivity;
 	private static int score = 0;
 
 	public MainActivity() {
