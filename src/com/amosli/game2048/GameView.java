@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -50,11 +49,9 @@ public class GameView extends GridLayout {
 					offsetY = event.getY() - startY;
 					if (Math.abs(offsetX) > Math.abs(offsetY)) {
 						if (offsetX < -5) {
-							System.out.println("left");
 							swipeLeft();
 						} else if (offsetX > 5) {
 							swipeRight();
-							System.out.println("right");
 						}
 					} else {
 						if (offsetY < -5) {
@@ -75,7 +72,7 @@ public class GameView extends GridLayout {
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);
-		int cardWidth = (Math.min(w, h) - 10) / 4;
+		int cardWidth = (Math.min(w, h) - 15) / 4;
 		addCards(cardWidth);
 		startGame();
 	}
@@ -106,7 +103,6 @@ public class GameView extends GridLayout {
 
 		addRandomNum();
 		addRandomNum();
-
 	}
 
 	private List<Point> emptyPoint = new ArrayList<Point>();
