@@ -1,20 +1,29 @@
 package com.amosli.rp;
 
 import java.util.Date;
+import java.util.Random;
 
 public class Calculator {
 	@SuppressWarnings("deprecation")
 	public static int calculateRPByName(String paramString) {
-		Date dt = new Date();
 		int result = 0;
-		for (int i = 0; i < paramString.length(); i++) {
-			int para = paramString.charAt(i);
-			result += para * 2 - dt.getYear() - dt.getDate();
-		}
-		result = Math.abs(result) % 100;
+		try {
 
-		String valueOf = String.valueOf(result).substring(0, 2);
-		System.out.println(valueOf);
+			Date dt = new Date();
+			for (int i = 0; i < paramString.length(); i++) {
+				int para = paramString.charAt(i);
+
+				result += para * 2 - dt.getYear() - dt.getDate() * 3;
+			}
+			result = Math.abs(result) % 100;
+
+			String valueOf = String.valueOf(result).substring(0, 2);
+			result = Integer.valueOf(valueOf);
+
+		} catch (Exception e) {
+			result = new Random().nextInt(100);
+		}
+		System.out.println(result);
 		return result;
 	}
 
@@ -25,5 +34,9 @@ public class Calculator {
 	public static String getComment(int score) {
 		int i = score / 5;
 		return comments[i];
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("aa");
 	}
 }
