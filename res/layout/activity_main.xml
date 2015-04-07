@@ -1,5 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   	android:id="@+id/container"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -23,8 +23,21 @@
     <com.amosli.game2048.GameView
         android:id="@+id/gameview"
         android:layout_width="fill_parent"
-        android:layout_weight="3"
-        android:layout_height="0dp" >
+        android:layout_height="0dp"
+        android:layout_weight="3" >
     </com.amosli.game2048.GameView>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnMore"
+        android:text="@string/more_" />
+
+    <LinearLayout
+        android:id="@+id/miniAdLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" 
+        android:orientation="horizontal"
+        />
 </LinearLayout>

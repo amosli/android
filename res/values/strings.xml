@@ -4,5 +4,6 @@
     <string name="app_name">2048</string>
     <string name="action_settings">Settings</string>
     <string name="score">score:</string>
+    <string name="more_">more...</string>
 
 </resources>
