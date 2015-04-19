@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">androidmonitor</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="readsms">sms</string>
+    <string name="readcontact">contact</string>
+    <string name="readlocation">location</string>
+    <string name="readcallrecords">callrecords</string>
+    <string name="title_activity_msg">MsgActivity</string>
+    <string name="msg_">msg...</string>
+
+</resources>
