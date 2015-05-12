@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">kptest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="_insertSMS">挺入短信</string>
+    <string name="_insertCallLog">插入通话记录</string>
+    <string name="_insertContact">插入联系人</string>
+    <string name="_progress">进度</string>
+    <string name="_deleteAll">删除所有数据</string>
+
+</resources>

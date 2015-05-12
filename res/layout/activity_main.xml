@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.amosli.kptest.MainActivity" >
+
+    <Button
+        android:id="@+id/btnInsertSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_insertSMS" />
+
+    <Button
+        android:id="@+id/btnInsertContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_insertContact" />
+
+    <Button
+        android:id="@+id/btnInsertCallLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_insertCallLog" />
+
+    <Button
+        android:id="@+id/btnDeleteAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_deleteAll" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_progress" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
